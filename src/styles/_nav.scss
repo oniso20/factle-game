@@ -1,0 +1,32 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    @include flexCenter();
+    background-color: $navBarBgColor;
+    margin: 1rem 2rem;
+    border-radius: 5px;
+
+    ul {
+        @include flexCenter();
+        flex-direction: row;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    li a{
+        text-decoration: none;
+        margin: 0 1rem;
+        font-weight: bold;
+        color: $navTextColor
+    }
+
+    li a span {
+        color: $navIconsColor;
+    }
+}

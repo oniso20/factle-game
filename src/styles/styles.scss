@@ -1,0 +1,19 @@
+
+$navBarBgColor: #F3F3F3;
+$navTextColor: #202537;
+$navIconsColor: #818181;
+
+$emptyBoxBgColor: #D3D6DA;
+$wrongPositionBgColor: #939B9F;
+$correctPositionBgColor: #66A060;
+$correctWithoutBgPosition: #CEB02C;
+
+$textColor: #ffffff;
+
+@import "./nav";
+@import "./main";
+
+
+main {
+    background: goldenrod;
+}
