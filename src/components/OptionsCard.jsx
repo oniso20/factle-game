@@ -1,22 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/styles.css";
 import useFactle from "../hooks/useFactle";
 
 const OptionsCard = ({ fact }) => {
   const { currentGuess, clickHandler } = useFactle({});
-  console.log(fact);
 
-  // const newFacts = Object.values(fact);
-  // console.log(newFacts);
-  // newFactOption = Object.entries(newFactOption);
-  // console.log(newFactOption);
-  // console.log(typeof newFactOption);
+  useEffect(() => {
+    window.addEventListener("click", clickHandler);
 
-  // const entries = Object.entries(fact);
-  // console.log(entries);
+    return () => window.removeEventListener("click", clickHandler);
+  }, [clickHandler]);
+
   return (
-    <div className="card-container">
-      {!currentGuess &&
+    <div className="options-container">
+      {fact &&
         Object.values(fact).map((fact, index) => (
           <div className="card" key={index}>
             {fact}

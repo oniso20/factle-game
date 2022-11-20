@@ -16,8 +16,14 @@ const useFactle = (fact) => {
 
     };
 
-    const clickHandler = (key) => {
-        console.log(key);
+    const clickHandler = (event) => {
+        let input = event.target.innerText;
+        // console.log(input);
+
+        if (Object.values(fact).includes(input)) {
+            return console.log(input);
+        }
+
     };
 
     return { turn, currentGuess, guesses, isCorrect, clickHandler };
