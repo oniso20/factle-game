@@ -18,12 +18,24 @@ const useFactle = (fact) => {
 
     const clickHandler = (event) => {
         let input = event.target.innerText;
-        // console.log(input);
+        let prev = '';
 
-        if (Object.values(fact).includes(input)) {
-            return console.log(input);
+        if (input === 'Backspace') {
+            setCurrentGuess((val) => {
+                return val.length < 2 ? '' : val.slice(1, -1);
+            });
         }
 
+        if (Object.values(fact).includes(input)) {
+            setCurrentGuess((prev) => {
+                prev = prev + ',' + input;
+
+                if (prev.split(',').slice(1).length < 6) {
+                    return prev;
+                }
+
+            });
+        }
     };
 
     return { turn, currentGuess, guesses, isCorrect, clickHandler };

@@ -3,7 +3,7 @@ import "../styles/styles.css";
 import useFactle from "../hooks/useFactle";
 
 const OptionsCard = ({ fact }) => {
-  const { currentGuess, clickHandler } = useFactle({});
+  const { currentGuess, clickHandler } = useFactle(fact);
 
   useEffect(() => {
     window.addEventListener("click", clickHandler);
@@ -19,6 +19,8 @@ const OptionsCard = ({ fact }) => {
             {fact}
           </div>
         ))}
+      <p>The current guess is: {currentGuess}</p>
+      <p>Backspace</p>
     </div>
   );
 };
