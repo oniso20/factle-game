@@ -15,7 +15,11 @@ const OptionsCard = ({ fact }) => {
     <div className="options-container">
       {fact &&
         Object.values(fact).map((fact, index) => (
-          <div className="card" key={index}>
+          <div
+            style={{ minWidth: "50px", minHeight: "50px" }}
+            className="card"
+            key={index}
+          >
             {fact}
           </div>
         ))}

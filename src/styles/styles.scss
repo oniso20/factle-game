@@ -1,20 +1,32 @@
-
-$navBarBgColor: #F3F3F3;
+$navBarBgColor: #f3f3f3;
 $navTextColor: #202537;
 $navIconsColor: #818181;
 
-$emptyBoxBgColor: #D3D6DA;
-$wrongPositionBgColor: #939B9F;
-$correctPositionBgColor: #66A060;
-$correctWithoutBgPosition: #CEB02C;
+$emptyBoxBgColor: #d3d6da;
+$wrongPositionBgColor: #939b9f;
+$correctPositionBgColor: #66a060;
+$correctWithoutBgPosition: #ceb02c;
 
 $textColor: #ffffff;
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin cardContainer {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 0.6rem;
+  row-gap: 0.6rem;
+  margin-top: 4rem;
+  height: fit-content;
+}
 
 @import "./nav";
 @import "./main";
 @import "./card";
-
-
-main {
-    background: goldenrod;
-}

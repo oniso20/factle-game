@@ -22,7 +22,7 @@ function App(props) {
   }, [setFact]);
 
   return (
-    <div>
+    <div className="main-container">
       <Nav />
       <Card key={props.key} />
       <OptionsCard fact={fact} />
