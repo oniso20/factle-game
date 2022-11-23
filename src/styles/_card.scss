@@ -1,0 +1,19 @@
+.card-container {
+  @include cardContainer();
+  width: 70vw;
+  pointer-events: none;
+}
+
+.options-container {
+  @include cardContainer();
+  width: 80vw;
+}
+
+.card {
+  @include flexCenter;
+  background-color: $emptyBoxBgColor;
+  padding: 2px;
+  text-align: center;
+  font-size: 0.7rem;
+  overflow: hidden;
+}

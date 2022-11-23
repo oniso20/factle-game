@@ -1,0 +1,6 @@
+.main-container {
+  @include flexCenter();
+  flex-direction: column;
+  margin: 1rem 2rem;
+  width: 90vw;
+}
