@@ -21,10 +21,18 @@ const useFactle = (fact) => {
         let prev = '';
 
         if (input === 'Backspace') {
-            setCurrentGuess((val) => {
-                return val.length < 2 ? '' : val.slice(1, -1);
+            setCurrentGuess((prev) => {
+                prev = prev.split(',').slice(0, -1);
+                return prev.join(',');
             });
         }
+
+        // if (input === 'Backspace') {
+        //     setCurrentGuess((val) => {
+        //         console.log(val);
+        //         return val.length < 2 ? val : val.split(',').slice(0, -1);
+        //     });
+        // }
 
         if (Object.values(fact).includes(input)) {
             setCurrentGuess((prev) => {
