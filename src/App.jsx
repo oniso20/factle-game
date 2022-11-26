@@ -12,10 +12,7 @@ function App(props) {
     fetch("http://localhost:3001/christmasSongs")
       .then((res) => res.json())
       .then((data) => {
-        //console.log(data);
-        //console.log(data.options.map((items) => items.text));
-        let factData = data.options.map((items) => items.text);
-        // factData = factData.join(",");
+        const factData = data.options;
         console.log(factData);
         setFact(factData);
       });
