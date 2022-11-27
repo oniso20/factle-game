@@ -9,7 +9,7 @@ function App(props) {
   const [fact, setFact] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/christmasSongs")
+    fetch("http://localhost:3000/christmasSongs")
       .then((res) => res.json())
       .then((data) => {
         const factData = data.options;

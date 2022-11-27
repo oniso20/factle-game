@@ -5,6 +5,7 @@ const useFactle = (facts) => {
     const [currentGuess, setCurrentGuess] = useState('');
     const [guesses, setGuesses] = useState([]); // each guess is an array
     const [history, setHistory] = useState([]); // each guess is a string
+    const [correctPosition, setCorrectPosition] = useState('');
     const [isCorrect, setIsCorrect] = useState(false);
 
     // Gets the facts text
@@ -12,7 +13,33 @@ const useFactle = (facts) => {
 
     const formatGuess = () => {
         // Give each text option a property of color, use index as key
-        console.log('formatting the guess: ', currentGuess);
+        const guessArray = currentGuess.split(',');
+        let formattedGuess = guessArray.map((selectedFact, index) => {
+            return { key: selectedFact, color: 'grey' };
+        });
+
+        const solutionArray = [];
+        facts.map((fact) => {
+            if (fact.correctPosition) {
+                solutionArray.push(fact.text);
+                return solutionArray.sort((a, b) => a.correctPosition - b.correctPosition, 0);
+            }
+        });
+
+        formattedGuess.forEach((selectedFact, index) => {
+            if (solutionArray[index] === selectedFact.key) {
+                formattedGuess[index].color = 'green';
+                solutionArray[index] = null;
+            }
+        });
+
+        formattedGuess.forEach((selectedFact, index) => {
+            if (solutionArray.includes(selectedFact.key) && selectedFact !== 'green') {
+                formattedGuess[index].color = 'yellow';
+                solutionArray[solutionArray.indexOf(selectedFact.key)] = null;
+            }
+        });
+        return formattedGuess;
 
     };
     // add a new guess to the guesses state
@@ -50,7 +77,7 @@ const useFactle = (facts) => {
         });
     };
 
-    const clickHandler = (event, text, key) => {
+    const clickHandler = (event, text, key, correctPosition) => {
 
         if (text) {
             setCurrentGuess((prev) => {
