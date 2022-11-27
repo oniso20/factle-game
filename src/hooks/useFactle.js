@@ -78,7 +78,7 @@ const useFactle = (facts) => {
         setCurrentGuess('');
     };
 
-    const enterGuessHandler = (event, text, id) => {
+    const enterGuessHandler = () => {
         console.log('click enter');
         //only add guess if turn is less than 5
         if (turn > 5) {

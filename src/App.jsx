@@ -22,7 +22,7 @@ function App(props) {
     <div className="main-container">
       <Nav />
       {/* <Card key={props.key} /> */}
-      <Factle fact={fact} />
+      <OptionsCard fact={fact} />
       {/* {fact && <Factle fact={fact} />} */}
     </div>
   );
