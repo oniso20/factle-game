@@ -3,8 +3,19 @@ import "../styles/styles.css";
 import useFactle from "../hooks/useFactle";
 
 const OptionsCard = ({ fact: facts }) => {
-  const { currentGuess, clickHandler, deleteGuess, enterGuessHandler } =
-    useFactle(facts);
+  const {
+    currentGuess,
+    guesses,
+    isCorrect,
+    turn,
+    clickHandler,
+    deleteGuess,
+    enterGuessHandler,
+  } = useFactle(facts);
+
+  useEffect(() => {
+    console.log(currentGuess, guesses, isCorrect, turn);
+  }, [currentGuess, guesses, isCorrect, turn]);
 
   return (
     <>

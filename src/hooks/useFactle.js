@@ -3,9 +3,9 @@ import { useState } from "react";
 const useFactle = (facts) => {
     const [turn, setTurn] = useState(0);
     const [currentGuess, setCurrentGuess] = useState('');
+    const [solution, setSolution] = useState('');
     const [guesses, setGuesses] = useState([]); // each guess is an array
     const [history, setHistory] = useState([]); // each guess is a string
-    const [correctPosition, setCorrectPosition] = useState('');
     const [isCorrect, setIsCorrect] = useState(false);
 
     // Gets the facts text
@@ -39,14 +39,43 @@ const useFactle = (facts) => {
                 solutionArray[solutionArray.indexOf(selectedFact.key)] = null;
             }
         });
+
         return formattedGuess;
 
     };
     // add a new guess to the guesses state
     //update the isCorrect state if the guess is correct
     // add one to the turn state
-    const addNewGuess = () => {
+    const addNewGuess = (formattedGuess) => {
 
+        const newSolutionArray = [];
+        facts.map((fact) => {
+            if (fact.correctPosition) {
+                newSolutionArray.push(fact.text);
+                return newSolutionArray.sort((a, b) => a.correctPosition - b.correctPosition, 0);
+            }
+        });
+
+        if (newSolutionArray.join(',') === currentGuess) {
+            setIsCorrect(true);
+        }
+
+        setGuesses((prevGuesses) => {
+            console.log('Prev guesses: ', prevGuesses);
+            let newGuesses = prevGuesses;
+            newGuesses[turn] = formattedGuess;
+            return newGuesses;
+        });
+
+        setHistory((prevHistory) => {
+            return prevHistory, currentGuess;
+        });
+
+        setTurn((prevTurn) => {
+            return prevTurn + 1;
+        });
+
+        setCurrentGuess('');
     };
 
     const enterGuessHandler = (event, text, id) => {
@@ -66,7 +95,8 @@ const useFactle = (facts) => {
             console.log('guesses must be five');
             return;
         }
-        formatGuess();
+        const formatted = formatGuess();
+        addNewGuess(formatted);
     };
 
     const deleteGuess = () => {
