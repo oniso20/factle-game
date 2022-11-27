@@ -1,16 +1,28 @@
 import React, { useEffect } from "react";
+import "../styles/styles.css";
 import useFactle from "../hooks/useFactle";
+import Grid from "./Grid";
 
-function Factle({ fact }) {
-  const { currentGuess, clickHandler } = useFactle(fact);
+const Factle = ({ fact: facts }) => {
+  const {
+    currentGuess,
+    guesses,
+    isCorrect,
+    turn,
+    clickHandler,
+    deleteGuess,
+    enterGuessHandler,
+  } = useFactle(facts);
 
   useEffect(() => {
-    window.addEventListener("click", clickHandler);
+    console.log(currentGuess, guesses, isCorrect, turn);
+  }, [currentGuess, guesses, isCorrect, turn]);
 
-    return () => window.removeEventListener("click", clickHandler);
-  }, [clickHandler]);
-
-  return <div>Factle</div>;
-}
+  return (
+    <>
+      <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
+    </>
+  );
+};
 
 export default Factle;

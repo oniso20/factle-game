@@ -21,9 +21,9 @@ function App(props) {
   return (
     <div className="main-container">
       <Nav />
-      <Card key={props.key} />
-      <OptionsCard fact={fact} />
-      {fact && <Factle fact={fact} />}
+      {/* <Card key={props.key} /> */}
+      <Factle fact={fact} />
+      {/* {fact && <Factle fact={fact} />} */}
     </div>
   );
 }
