@@ -7,6 +7,7 @@ const useFactle = (facts) => {
     const [guesses, setGuesses] = useState([...Array(6)]); // each guess is an array
     const [history, setHistory] = useState([]); // each guess is a string
     const [isCorrect, setIsCorrect] = useState(false);
+    const [usedKeys, setUsedKeys] = useState({}); // {a: 'grey', b: 'green', c: 'yellow'} etc
 
     // Gets the facts text
     const textGen = (textArray) => textArray.map((text) => text.text);
@@ -39,6 +40,7 @@ const useFactle = (facts) => {
                 solutionArray[solutionArray.indexOf(selectedFact.key)] = null;
             }
         });
+        console.log(formattedGuess);
 
         return formattedGuess;
 
@@ -73,6 +75,27 @@ const useFactle = (facts) => {
 
         setTurn((prevTurn) => {
             return prevTurn + 1;
+        });
+
+        setUsedKeys(prevUsedKeys => {
+            formattedGuess.forEach(guess => {
+                const currentColor = prevUsedKeys[guess.key];
+
+                if (guess.color === 'green') {
+                    prevUsedKeys[guess.key] = 'green';
+                    return;
+                }
+                if (guess.color === 'yellow' && currentColor !== 'green') {
+                    prevUsedKeys[guess.key] = 'yellow';
+                    return;
+                }
+                if (guess.color === 'grey' && currentColor !== ('green' || 'yellow')) {
+                    prevUsedKeys[guess.key] = 'grey';
+                    return;
+                }
+            });
+
+            return prevUsedKeys;
         });
 
         setCurrentGuess('');
@@ -122,7 +145,7 @@ const useFactle = (facts) => {
         }
     };
 
-    return { turn, currentGuess, guesses, isCorrect, clickHandler, deleteGuess, enterGuessHandler };
+    return { turn, currentGuess, guesses, isCorrect, usedKeys, clickHandler, deleteGuess, enterGuessHandler };
 };
 
 export default useFactle;

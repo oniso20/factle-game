@@ -10,13 +10,27 @@
 }
 
 .options-container > div {
-  min-width: 70px;
-  min-height: 70px;
+  border: 1px solid #3333338f;
 }
 
-.card {
+.options-container > div.green {
+  background: #5ac85a;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+.options-container > div.yellow {
+  background: #e2cc68;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+.options-container > div.grey {
+  background: #a1a1a1;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+
+#card {
   @include flexCenter;
-  background-color: $emptyBoxBgColor;
   padding: 2px;
   text-align: center;
   font-size: 0.7rem;
