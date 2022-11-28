@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Factle Game Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Factle is a new Wordle spin-off that asks users to solve a daily fact based challenge, such as which songs on Spotify have been streamed the most, what country has won the world cup the most. Users must then pick the top five answers and have six chances to make their guesses.
+
+The game is developed to help users learn new facts, try their knowledge on current facts in a fun way.
+
+Learn more about Factle and Wordle games here - https://www.womanandhome.com/life/news-entertainment/factlethe-new-wordle-alternative-that-fans-are-loving/
+
+More info will be posted as the project is developed.
 
 ## Available Scripts
 
@@ -43,32 +49,10 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Technologies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- HTML
+- SASS
+- CSS
+- JAVASCRIPT
+- REACT
