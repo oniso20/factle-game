@@ -82,20 +82,78 @@
 }
 
 .rows > div.green {
-  background: $correctPositionBgColor;
-  border-color: $correctPositionBgColor;
-  color: $textColor;
+  --background: #66a060;
+  --border-color: #66a060;
   border: 3px solid #33333321;
+  animation: cardFlip 0.5s ease forwards;
 }
 .rows > div.grey {
-  background: $wrongPositionBgColor;
-  border-color: $wrongPositionBgColor;
-  color: $textColor;
+  --background: #939b9f;
+  --border-color: #939b9f;
   border: 3px solid #33333321;
+  animation: cardFlip 0.6s ease forwards;
 }
 .rows > div.yellow {
-  background: $correctWithoutBgPosition;
-  border-color: $correctWithoutBgPosition;
-  color: $textColor;
+  --background: #ceb02c;
+  --border-color: #ceb02c;
   border: 3px solid #33333321;
+  animation: cardFlip 0.5s ease forwards;
+}
+.rows > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.rows > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.rows > div:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.rows > div:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.rows.current > div.filled {
+  animation: bounce 0.2s ease-in-out forwards;
+}
+
+/* keyframe animations */
+@keyframes cardFlip {
+  0% {
+    transform: rotateX(0);
+    background: #fff;
+    border-color: #333333;
+    border: 3px solid #33333321;
+  }
+  45% {
+    transform: rotateX(90deg);
+    background: white;
+    border-color: #333333;
+    border: 3px solid #33333321;
+  }
+  55% {
+    transform: rotateX(90deg);
+    background: var(--background);
+    border-color: var(--border-color);
+    border: 3px solid #33333321;
+  }
+  100% {
+    transform: rotateX(0deg);
+    background: var(--background);
+    border-color: var(--border-color);
+    border: 3px solid #33333321;
+    color: $textColor;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+    border-color: #ddd;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    border: 3px solid #33333321;
+  }
 }

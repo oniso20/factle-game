@@ -132,14 +132,18 @@ const useFactle = (facts) => {
 
     const clickHandler = (event, text, key, correctPosition) => {
 
-        if (text) {
+        if (!currentGuess.split(',').includes(text)) {
             setCurrentGuess((prev) => {
                 console.log(prev);
+
                 prev = prev + ',' + text;
+
 
                 if (prev.split(',').length < 6) {
                     return prev.split(',').filter(element => element !== '').join(',');
                 }
+
+
 
             });
         }
