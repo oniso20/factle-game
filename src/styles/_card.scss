@@ -1,31 +1,52 @@
 .card-container {
   @include cardContainer();
-  width: 70vw;
+  width: 70%;
   pointer-events: none;
 }
 
 .options-container {
   @include cardContainer();
-  width: 80vw;
+  width: 70%;
+  max-width: 100vw;
 }
 
 .options-container > div {
-  border: 1px solid #3333338f;
+  border: 3px solid #3333338f;
+  border-radius: 5px 10px 15px 30px/30px 15px 10px 5px;
+  @include cardFont();
+  min-width: 70px;
+  height: 80px;
+  color: #333333;
+  text-overflow: ellipsis;
+  direction: ltr;
+  white-space: normal;
+  overflow: hidden;
+  padding: 0.2rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
 }
 
 .options-container > div.green {
-  background: #5ac85a;
-  color: #fff;
+  background: $correctPositionBgColor;
+  border-color: $correctPositionBgColor;
+  color: $textColor;
+  border: 3px solid #33333321;
   transition: all 0.3s ease-in;
 }
 .options-container > div.yellow {
-  background: #e2cc68;
-  color: #fff;
+  background: $correctWithoutBgPosition;
+  border-color: $correctWithoutBgPosition;
+  color: $textColor;
+  border: 3px solid #33333321;
   transition: all 0.3s ease-in;
 }
 .options-container > div.grey {
-  background: #a1a1a1;
-  color: #fff;
+  background: $wrongPositionBgColor;
+  border-color: $wrongPositionBgColor;
+  color: $textColor;
+  border: 3px solid #33333321;
   transition: all 0.3s ease-in;
 }
 
@@ -42,23 +63,39 @@
 }
 .rows > div {
   @include flexCenter();
-  width: 72px;
-  min-height: 80px;
-  border: 1px solid #bbb;
+  width: 65px;
+  height: 70px;
+  border: 3px solid #bbb;
+  @include cardFont();
+  border-radius: 3px 7px 10px 15px/10px;
   margin: 4px;
-  text-align: center;
   color: #333333;
+  text-overflow: ellipsis;
+  direction: ltr;
+  white-space: normal;
+  overflow: hidden;
+  padding: 0.18rem 0.18rem 0.18rem 0.18rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
 }
 
 .rows > div.green {
-  background: #5ac85a;
-  border-color: #5ac85a;
+  background: $correctPositionBgColor;
+  border-color: $correctPositionBgColor;
+  color: $textColor;
+  border: 3px solid #33333321;
 }
 .rows > div.grey {
-  background: #a1a1a1;
-  border-color: #a1a1a1;
+  background: $correctWithoutBgPosition;
+  border-color: $correctWithoutBgPosition;
+  color: $textColor;
+  border: 3px solid #33333321;
 }
 .rows > div.yellow {
-  background: #e2cc68;
-  border-color: #e2cc68;
+  background: $correctWithoutBgPosition;
+  border-color: $correctWithoutBgPosition;
+  color: $textColor;
+  border: 3px solid #33333321;
 }
