@@ -14,23 +14,21 @@
       },
       {
         "id": 3,
-        "text": "Christmas was all fun last year (Micheal Jackson)",
-        "correctPosition": 2
+        "text": "Christmas was all fun last year (Micheal Jackson)"
       },
       {
         "id": 4,
         "text": "Let's read about christmas (James Bond)",
-        "correctPosition": 3
+        "correctPosition": 2
       },
       {
         "id": 5,
-        "text": "Christmas is spain and Italy (World cup)",
-        "correctPosition": 4
+        "text": "Christmas is spain and Italy (World cup)"
       },
       {
         "id": 6,
         "text": "The fun just started at Christmas (Blue Man)",
-        "correctPosition": 5
+        "correctPosition": 3
       },
       {
         "id": 7,
@@ -38,7 +36,77 @@
       },
       {
         "id": 8,
-        "text": "Nothing to do on christmas morning (Nomady John)"
+        "text": "fake songs for game (Fake John)",
+        "correctPosition": 4
+      },
+      {
+        "id": 9,
+        "text": "Blue Christmas is white (White Snow)"
+      },
+      {
+        "id": 10,
+        "text": "Christmas in Tallin (Mariah Tallinn)",
+        "correctPosition": 5
+      },
+      {
+        "id": 11,
+        "text": "Christmas in Helsinki (Micheal Helsinki)"
+      },
+      {
+        "id": 12,
+        "text": "Let's sing about Christmas (James Vera)"
+      },
+      {
+        "id": 13,
+        "text": "Christmas in Quatar (Beauty B.)"
+      },
+      {
+        "id": 14,
+        "text": "The time to open gifts (Gift Man)"
+      },
+      {
+        "id": 15,
+        "text": "Not another boxing day (Mary Chris)"
+      },
+      {
+        "id": 16,
+        "text": "Beautiful Bela (Beauty John)"
+      },
+      {
+        "id": 17,
+        "text": "Jenny Stone (Stone Boy)"
+      },
+      {
+        "id": 18,
+        "text": "Black is beautiful (Beautiful world)"
+      },
+      {
+        "id": 19,
+        "text": "Now and forever (Jonah Frank)"
+      },
+      {
+        "id": 20,
+        "text": "Celebrate love (James Ken)"
+      },
+      {
+        "id": 21,
+        "text": "Here is the start (End Jude)"
+      },
+      {
+        "id": 22,
+        "text": "All he does is sing (Judy Gem)"
+      },
+      {
+        "id": 23,
+        "text": "Driving through the snore (Kenny West)"
+      },
+      {
+        "id": 24,
+        "text": "Fly high is Christmas (Micheal John)"
+      },
+      {
+        "id": 25,
+        "text": "Where do we start (John Presley)"
       }
     ]
   }

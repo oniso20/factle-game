@@ -15,10 +15,6 @@ const OptionsCard = ({ fact: facts }) => {
     enterGuessHandler,
   } = useFactle(facts);
 
-  useEffect(() => {
-    console.log(isCorrect, turn, usedKeys);
-  }, [currentGuess, guesses, isCorrect, turn]);
-
   return (
     <>
       <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
@@ -31,7 +27,7 @@ const OptionsCard = ({ fact: facts }) => {
                 className={color}
                 id="card"
                 key={text}
-                onClick={function (event) {
+                onClick={(event) => {
                   clickHandler(event, text, id.toString(), correctPosition);
                   enterGuessHandler();
                 }}
@@ -41,9 +37,14 @@ const OptionsCard = ({ fact: facts }) => {
             );
           })}
       </div>
-      <p>The current guess is: {currentGuess}</p>
-      <p onClick={() => deleteGuess()}>Backspace</p>
-      <p onClick={() => enterGuessHandler()}>Enter</p>
+      <div className="buttons-container">
+        <button className="buttons" onClick={() => deleteGuess()}>
+          Backspace
+        </button>
+        <button className="buttons" onClick={() => enterGuessHandler()}>
+          Enter
+        </button>
+      </div>
     </>
   );
 };
