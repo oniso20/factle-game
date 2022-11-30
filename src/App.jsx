@@ -17,11 +17,13 @@ function App(props) {
   }, [setFact]);
 
   return (
-    <div className="main-container">
+    <>
       <Nav />
-      <Question />
-      <OptionsCard fact={fact} />
-    </div>
+      <div className="main-container">
+        <Question />
+        <OptionsCard fact={fact} />
+      </div>
+    </>
   );
 }
 

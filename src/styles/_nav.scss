@@ -2,10 +2,13 @@ nav {
   @include flexCenter();
   @include cardFont();
   font-size: 1.2rem;
+  width: 70vw;
+  margin: 0 15vw 0 15vw;
+  height: 3rem;
   background-color: $navBarBgColor;
   border: 3px solid #33333383;
   border-radius: 15px 15px 0 0;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 
   ul {
     @include flexCenter();
