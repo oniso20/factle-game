@@ -12,7 +12,6 @@ function App(props) {
       .then((res) => res.json())
       .then((data) => {
         const factData = data.options;
-        console.log(factData);
         setFact(factData);
       });
   }, [setFact]);
