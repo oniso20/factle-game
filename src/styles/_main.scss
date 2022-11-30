@@ -1,4 +1,5 @@
 .main-container {
   @include flexCenter();
   flex-direction: column;
+  transform: scale(0.7);
 }
