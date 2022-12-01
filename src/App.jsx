@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import "./styles/styles.css";
 import Nav from "./components/Nav";
-import Card from "./components/Card";
-import Factle from "./components/Factle";
+import Question from "./components/Question";
 import OptionsCard from "./components/OptionsCard";
 
 function App(props) {
@@ -12,22 +11,19 @@ function App(props) {
     fetch("http://localhost:3001/christmasSongs")
       .then((res) => res.json())
       .then((data) => {
-        //console.log(data);
-        //console.log(data.options.map((items) => items.text));
-        let factData = data.options.map((items) => items.text);
-        // factData = factData.join(",");
-        console.log(factData);
+        const factData = data.options;
         setFact(factData);
       });
   }, [setFact]);
 
   return (
-    <div className="main-container">
+    <>
       <Nav />
-      <Card key={props.key} />
-      <OptionsCard fact={fact} />
-      {fact && <Factle fact={fact} />}
-    </div>
+      <div className="main-container">
+        <Question />
+        <OptionsCard fact={fact} />
+      </div>
+    </>
   );
 }
 
