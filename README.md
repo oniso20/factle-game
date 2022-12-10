@@ -21,6 +21,8 @@ More info will be posted as the project is developed.
 
 In the project directory, you can run:
 
+CD to client folder or server before running available scripts
+
 ### `npm install`
 
 Installs and check for dependencies.
