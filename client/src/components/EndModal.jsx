@@ -15,7 +15,7 @@ const EndModal = ({ isCorrect, turn, solution, close }) => {
       )}
       {!isCorrect && (
         <div className="modal-scope">
-          <span className="Close" onClick={close}>
+          <span className="close" onClick={close}>
             close
           </span>
           <h1>Nevermind</h1>

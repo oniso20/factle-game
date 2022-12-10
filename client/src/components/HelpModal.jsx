@@ -8,7 +8,7 @@ const HelpModal = ({ closeHelp }) => {
           close
         </span>
         <h1>How To Play</h1>
-        <p>Guess the FACTLE in five tries.</p>
+        <p>Guess the FACTLE in six tries.</p>
         <p>
           For each guess, rank what you think are the top 5 answers. Hit the
           enter button to submit.
