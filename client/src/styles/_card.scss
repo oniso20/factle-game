@@ -22,7 +22,7 @@
   direction: ltr;
   white-space: normal;
   overflow: hidden;
-  padding: 0.2rem;
+  padding: 0;
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -68,13 +68,13 @@
   border: 3px solid #bbb;
   @include cardFont();
   border-radius: 3px 7px 10px 15px/10px;
-  margin: 4px;
+  margin: 0 4px;
   color: #333333;
   text-overflow: ellipsis;
   direction: ltr;
   white-space: normal;
   overflow: hidden;
-  padding: 0.18rem 0.18rem 0.18rem 0.18rem;
+  padding: 0 0.18rem 0.18rem 0.18rem;
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -169,8 +169,9 @@
 @media screen and (min-width: 500px) {
   .options-container > div {
     width: 120px;
-    height: fit-content;
-    padding: auto;
+    height: 30px;
+    margin: 0;
+    padding: 0.6rem;
   }
 
   .rows-container > div {

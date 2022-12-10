@@ -21,8 +21,8 @@ function App(props) {
 
   return (
     <>
+      <Nav />
       <div className="main-container">
-        <Nav />
         <Question fact={fact} />
         <OptionsCard fact={fact} />
       </div>

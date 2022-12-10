@@ -6,11 +6,11 @@
   background: rgba(255, 255, 255, 0.7);
   position: fixed;
 }
-.modal .modal-scope {
+.modal-scope {
   @include flexCenter();
   position: relative;
   flex-direction: column;
-  max-width: 480px;
+  width: 480px;
   height: 380px;
   background: #fff;
   padding: 2rem;
@@ -41,4 +41,33 @@
   font-size: 0.8em;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.modal .tiles {
+  @include flexCenter();
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.modal .modal-scope > p,
+div,
+h1 {
+  margin: 10px 0;
+}
+
+.modal .tiles > span {
+  width: 40px;
+  height: 40px;
+  margin: 4px;
+  text-align: center;
+  line-height: 40px;
+  background: $wrongPositionBgColor;
+}
+
+.modal .tiles > .correct-position {
+  background: $correctPositionBgColor;
+}
+
+.modal .tiles > .wrong-position {
+  background: $correctWithoutBgPosition;
 }

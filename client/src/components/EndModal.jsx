@@ -1,6 +1,6 @@
 import React from "react";
 
-const EndModal = ({ isCorrect, solution, turn, close }) => {
+const EndModal = ({ isCorrect, turn, solution, close }) => {
   return (
     <div className="modal">
       {isCorrect && (

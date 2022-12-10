@@ -7,6 +7,7 @@ import { useState } from "react";
 
 const OptionsCard = ({ fact: facts }) => {
   const [showModal, setShowModal] = useState(false);
+
   const {
     currentGuess,
     guesses,
