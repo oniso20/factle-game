@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Bubblegum+Sans&display=swap");
+
+$navBarBgColor: #f3f3f3b0;
+$navTextColor: #202537;
+$navIconsColor: #818181;
+
+$emptyBoxBgColor: #d3d6da;
+$wrongPositionBgColor: #939b9f;
+$correctPositionBgColor: #66a060;
+$correctWithoutBgPosition: #ceb02c;
+
+$textColor: #ffffff;
+
+@mixin cardFont {
+  font-family: "Baloo 2";
+  line-height: 10px;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin cardContainer {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 0.6rem;
+  row-gap: 0.6rem;
+  margin-top: 3rem;
+}
+
+@import "./nav";
+@import "./main";
+@import "./card";
+@import "./button";
+@import "./question";
+@import "./modal";

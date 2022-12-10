@@ -1,0 +1,180 @@
+.card-container {
+  @include cardContainer();
+  width: 70%;
+  pointer-events: none;
+}
+
+.options-container {
+  @include cardContainer();
+  width: fit-content;
+  max-width: 100vw;
+}
+
+.options-container > div {
+  @include flexCenter();
+  border: 3px solid #3333338f;
+  border-radius: 5px 10px 15px 30px/30px 15px 10px 5px;
+  @include cardFont();
+  width: 60px;
+  height: 70px;
+  color: #333333;
+  text-overflow: ellipsis;
+  direction: ltr;
+  white-space: normal;
+  overflow: hidden;
+  padding: 0.2rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.options-container > div.green {
+  background: $correctPositionBgColor;
+  border-color: $correctPositionBgColor;
+  color: $textColor;
+  border: 3px solid #33333321;
+  transition: all 0.3s ease-in;
+}
+.options-container > div.yellow {
+  background: $correctWithoutBgPosition;
+  border-color: $correctWithoutBgPosition;
+  color: $textColor;
+  border: 3px solid #33333321;
+  transition: all 0.3s ease-in;
+}
+.options-container > div.grey {
+  background: $wrongPositionBgColor;
+  border-color: $wrongPositionBgColor;
+  color: $textColor;
+  border: 3px solid #33333321;
+  transition: all 0.3s ease-in;
+}
+
+#card {
+  @include flexCenter;
+  padding: 2px;
+  text-align: center;
+  font-size: 0.7rem;
+  overflow: hidden;
+}
+
+.rows {
+  @include flexCenter();
+}
+.rows > div {
+  width: 60px;
+  height: 70px;
+  border: 3px solid #bbb;
+  @include cardFont();
+  border-radius: 3px 7px 10px 15px/10px;
+  margin: 4px;
+  color: #333333;
+  text-overflow: ellipsis;
+  direction: ltr;
+  white-space: normal;
+  overflow: hidden;
+  padding: 0.18rem 0.18rem 0.18rem 0.18rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.rows > div.green {
+  --background: #66a060;
+  --border-color: #66a060;
+  border: 3px solid #33333321;
+  animation: cardFlip 0.5s ease forwards;
+}
+.rows > div.grey {
+  --background: #939b9f;
+  --border-color: #939b9f;
+  border: 3px solid #33333321;
+  animation: cardFlip 0.6s ease forwards;
+}
+.rows > div.yellow {
+  --background: #ceb02c;
+  --border-color: #ceb02c;
+  border: 3px solid #33333321;
+  animation: cardFlip 0.5s ease forwards;
+}
+.rows > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.rows > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.rows > div:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.rows > div:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.rows.current > div.filled {
+  animation: bounce 0.2s ease-in-out forwards;
+}
+
+/* keyframe animations */
+@keyframes cardFlip {
+  0% {
+    transform: rotateX(0);
+    background: #fff;
+    border-color: #333333;
+    border: 3px solid #33333321;
+    height: 70px; /* set the height to the same value as the line-height */
+    line-height: 70px;
+  }
+  45% {
+    transform: rotateX(90deg);
+    background: white;
+    border-color: #333333;
+    border: 3px solid #33333321;
+    height: 70px; /* set the height to the same value as the line-height */
+    line-height: 70px;
+  }
+  55% {
+    transform: rotateX(90deg);
+    background: var(--background);
+    border-color: var(--border-color);
+    border: 3px solid #33333321;
+    height: 70px; /* set the height to the same value as the line-height */
+    line-height: 70px;
+  }
+  100% {
+    transform: rotateX(0deg);
+    background: var(--background);
+    border-color: var(--border-color);
+    border: 3px solid #33333321;
+    color: $textColor;
+    height: 70px; /* set the height to the same value as the line-height */
+    line-height: 70px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+    border-color: #ddd;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    border: 3px solid #33333321;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .options-container > div {
+    width: 120px;
+    height: fit-content;
+    padding: auto;
+  }
+
+  .rows-container > div {
+    width: 80px;
+    height: 65px;
+  }
+}

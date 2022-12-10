@@ -1,0 +1,33 @@
+nav {
+  position: sticky;
+  @include flexCenter();
+  @include cardFont();
+  min-width: 70vw;
+  height: 3rem;
+  background-color: $navBarBgColor;
+  border: 3px solid #33333383;
+  border-radius: 15px 15px 0 0;
+  margin-bottom: 2rem;
+
+  ul {
+    @include flexCenter();
+    align-items: center;
+    flex-direction: row;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  li a {
+    padding: 0;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    color: $navTextColor;
+  }
+
+  li a span {
+    color: $navIconsColor;
+  }
+}

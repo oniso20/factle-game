@@ -1,0 +1,45 @@
+{
+  "christmasSongs": {
+    "Id": 1,
+    "prompt": "Most streamed Christmas songs worldwide on Spotify (as of Dec 2021)",
+    "options": [
+      {
+        "id": 1,
+        "text": "Blue Christmas (Elvis Presley)"
+      },
+      {
+        "id": 2,
+        "text": "All I want for Christmas is You (Mariah Carey)",
+        "correctPosition": 1
+      },
+      {
+        "id": 3,
+        "text": "All I want for Christmas is You (Mariah Carey)",
+        "correctPosition": 2
+      },
+      {
+        "id": 4,
+        "text": "All I want for Christmas is You (Mariah Carey)",
+        "correctPosition": 3
+      },
+      {
+        "id": 5,
+        "text": "All I want for Christmas is You (Mariah Carey)",
+        "correctPosition": 4
+      },
+      {
+        "id": 6,
+        "text": "All I want for Christmas is You (Mariah Carey)",
+        "correctPosition": 5
+      },
+      {
+        "id": 7,
+        "text": "All I want for Christmas is You (Mariah Carey)"
+      },
+      {
+        "id": 8,
+        "text": "All I want for Christmas is You (Mariah Carey)"
+      }
+    ]
+  }
+}
