@@ -37,7 +37,7 @@ You may also see any lint errors in the console.
 
 ### `npm run start:backend`
 
-The json-server serving the test data is fired when this command is run. The json-data will be hosted on localhost:3001 as React will already be using localhost 3000.
+The json-server serving the test data is fired when this command is run. The json-data will be hosted on localhost:4200 as React will already be using localhost 3000.
 
 ### `npm test`
 
