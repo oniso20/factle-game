@@ -1,4 +1,4 @@
-# Factle Game Project
+# FactChecker Game Project
 
 Factle is a new Wordle spin-off that asks users to solve a daily fact based challenge, such as which songs on Spotify have been streamed the most, what country has won the world cup the most. Users must then pick the top five answers and have six chances to make their guesses.
 

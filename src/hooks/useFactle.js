@@ -21,21 +21,7 @@ const useFactle = (facts) => {
             .filter(option => option.correctPosition)
             .sort((a, b) => a.correctPosition - b.correctPosition);
 
-        console.log(solutionArrayData);
-
-        solutionArrayData.map((solution) => {
-            solutionArray.push(solution.text);
-        });
-        console.log(solutionArray);
-
-
-        // facts.options.map((fact) => {
-        //     if (fact.correctPosition) {
-        //         solutionArrayData.push(fact);
-        //         const solutionArray = solutionArrayData.sort((a, b) => a.correctPosition - b.correctPosition);
-        //         return solutionArray;
-        //     }
-        // });
+        solutionArrayData.map((solution) => solutionArray.push(solution.text));
 
         formattedGuess.forEach((selectedFact, index) => {
             if (solutionArray[index] === selectedFact.key) {
@@ -62,11 +48,7 @@ const useFactle = (facts) => {
             .filter(option => option.correctPosition)
             .sort((a, b) => a.correctPosition - b.correctPosition);
 
-        console.log(solutionArrayData);
-
-        solutionArrayData.map((soln) => {
-            solutionArray.push(soln.text);
-        });
+        solutionArrayData.map((soln) => solutionArray.push(soln.text));
 
         setSolution(solutionArray);
 

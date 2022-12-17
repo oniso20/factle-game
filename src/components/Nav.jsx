@@ -42,7 +42,7 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <a href="#">FACTLE</a>
+            <a href="#">FactChecker</a>
           </li>
           <li>
             <a href="#">

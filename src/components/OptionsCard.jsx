@@ -13,7 +13,6 @@ const OptionsCard = ({ fact: facts }) => {
     guesses,
     solution,
     isCorrect,
-    setIsCorrect,
     turn,
     usedKeys,
     clickHandler,
