@@ -11,21 +11,23 @@
 }
 
 .options-container > div {
+  @include flexCenter();
   border: 3px solid #3333338f;
   border-radius: 5px 10px 15px 30px/30px 15px 10px 5px;
   @include cardFont();
-  width: 70px;
+  width: 60px;
   height: 70px;
   color: #333333;
   text-overflow: ellipsis;
   direction: ltr;
   white-space: normal;
   overflow: hidden;
-  padding: 0.2rem;
+  padding: 0;
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
+  cursor: pointer;
 }
 
 .options-container > div.green {
@@ -62,19 +64,18 @@
   @include flexCenter();
 }
 .rows > div {
-  @include flexCenter();
-  width: 65px;
+  width: 60px;
   height: 70px;
   border: 3px solid #bbb;
   @include cardFont();
   border-radius: 3px 7px 10px 15px/10px;
-  margin: 4px;
+  margin: 0 4px;
   color: #333333;
   text-overflow: ellipsis;
   direction: ltr;
   white-space: normal;
   overflow: hidden;
-  padding: 0.18rem 0.18rem 0.18rem 0.18rem;
+  padding: 0 0.18rem 0.18rem 0.18rem;
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -122,18 +123,24 @@
     background: #fff;
     border-color: #333333;
     border: 3px solid #33333321;
+    height: 70px; /* set the height to the same value as the line-height */
+    line-height: 70px;
   }
   45% {
     transform: rotateX(90deg);
     background: white;
     border-color: #333333;
     border: 3px solid #33333321;
+    height: 70px; /* set the height to the same value as the line-height */
+    line-height: 70px;
   }
   55% {
     transform: rotateX(90deg);
     background: var(--background);
     border-color: var(--border-color);
     border: 3px solid #33333321;
+    height: 70px; /* set the height to the same value as the line-height */
+    line-height: 70px;
   }
   100% {
     transform: rotateX(0deg);
@@ -141,6 +148,8 @@
     border-color: var(--border-color);
     border: 3px solid #33333321;
     color: $textColor;
+    height: 70px; /* set the height to the same value as the line-height */
+    line-height: 70px;
   }
 }
 
@@ -155,5 +164,19 @@
   100% {
     transform: scale(1);
     border: 3px solid #33333321;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .options-container > div {
+    width: 120px;
+    height: 30px;
+    margin: 0;
+    padding: 0.6rem;
+  }
+
+  .rows-container > div {
+    width: 80px;
+    height: 65px;
   }
 }

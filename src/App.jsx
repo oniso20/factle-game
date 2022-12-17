@@ -8,11 +8,11 @@ function App(props) {
   const [fact, setFact] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/christmasSongs")
+    fetch("http://localhost:4200/dev/v1/facts")
       .then((res) => res.json())
       .then((data) => {
-        const factData = data.options;
-        setFact(factData);
+        const randomFact = data[Math.floor(Math.random() * data.length)];
+        setFact(randomFact);
       });
   }, [setFact]);
 
@@ -20,7 +20,7 @@ function App(props) {
     <>
       <Nav />
       <div className="main-container">
-        <Question />
+        <Question fact={fact} />
         <OptionsCard fact={fact} />
       </div>
     </>

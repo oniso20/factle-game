@@ -1,14 +1,18 @@
+.question {
+  text-align: center;
+}
+
 .position {
   @include flexCenter();
-  margin: 0;
+  margin: 1rem 0 0 0;
   padding: 0;
 }
 
 .position > div {
   @include flexCenter();
-  width: 65px;
+  width: 60px;
   @include cardFont();
-  margin: 4px;
+  margin: 0 4px;
   color: #333333;
   padding: 0.3rem;
   font-size: 1.2rem;

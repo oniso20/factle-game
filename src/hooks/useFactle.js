@@ -5,6 +5,7 @@ const useFactle = (facts) => {
     const [currentGuess, setCurrentGuess] = useState('');
     const [guesses, setGuesses] = useState([...Array(6)]); // each guess is an array
     const [history, setHistory] = useState([]); // each guess is a string
+    const [solution, setSolution] = useState([]);
     const [isCorrect, setIsCorrect] = useState(false);
     const [usedKeys, setUsedKeys] = useState({}); // {a: 'grey', b: 'green', c: 'yellow'} etc
 
@@ -16,12 +17,11 @@ const useFactle = (facts) => {
         });
 
         const solutionArray = [];
-        facts.map((fact) => {
-            if (fact.correctPosition) {
-                solutionArray.push(fact.text);
-                return solutionArray.sort((a, b) => a.correctPosition - b.correctPosition, 0);
-            }
-        });
+        const solutionArrayData = facts.options
+            .filter(option => option.correctPosition)
+            .sort((a, b) => a.correctPosition - b.correctPosition);
+
+        solutionArrayData.map((solution) => solutionArray.push(solution.text));
 
         formattedGuess.forEach((selectedFact, index) => {
             if (solutionArray[index] === selectedFact.key) {
@@ -43,15 +43,16 @@ const useFactle = (facts) => {
     // add one to the turn state
     const addNewGuess = (formattedGuess) => {
 
-        const newSolutionArray = [];
-        facts.map((fact) => {
-            if (fact.correctPosition) {
-                newSolutionArray.push(fact.text);
-                return newSolutionArray.sort((a, b) => a.correctPosition - b.correctPosition, 0);
-            }
-        });
+        const solutionArray = [];
+        const solutionArrayData = facts.options
+            .filter(option => option.correctPosition)
+            .sort((a, b) => a.correctPosition - b.correctPosition);
 
-        if (newSolutionArray.join(',') === currentGuess) {
+        solutionArrayData.map((soln) => solutionArray.push(soln.text));
+
+        setSolution(solutionArray);
+
+        if (solutionArray.join(',') === currentGuess) {
             setIsCorrect(true);
         }
 
@@ -117,6 +118,8 @@ const useFactle = (facts) => {
     };
 
     const clickHandler = (event, text) => {
+
+        if (isCorrect || turn > 5) return;
         // Take only new cases per turn
         if (!currentGuess.split(',').includes(text)) {
             setCurrentGuess((prev) => {
@@ -128,7 +131,7 @@ const useFactle = (facts) => {
         }
     };
 
-    return { turn, currentGuess, guesses, isCorrect, usedKeys, clickHandler, deleteGuess, enterGuessHandler };
+    return { turn, currentGuess, guesses, isCorrect, solution, usedKeys, clickHandler, deleteGuess, enterGuessHandler };
 };
 
 export default useFactle;

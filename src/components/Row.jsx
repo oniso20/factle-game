@@ -19,7 +19,11 @@ const Row = ({ guess, currentGuess }) => {
     return (
       <div className="rows current">
         {facts.map((fact, idx) => (
-          <div key={idx} className="filled">
+          <div
+            style={{ height: "70px", lineHeight: "70px" }}
+            key={idx}
+            className="filled"
+          >
             {fact}
           </div>
         ))}

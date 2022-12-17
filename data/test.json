@@ -1,117 +1,5 @@
-{
-  "christmasSongs": {
-    "Id": 1,
-    "prompt": "Most streamed Christmas songs worldwide on Spotify (as of Dec 2021)",
-    "options": [
-      {
-        "id": 1,
-        "text": "Blue Christmas (Elvis Presley)"
-      },
-      {
-        "id": 2,
-        "text": "All I want for Christmas is You (Mariah Carey)",
-        "correctPosition": 1
-      },
-      {
-        "id": 3,
-        "text": "Christmas was all fun last year (Micheal Jackson)"
-      },
-      {
-        "id": 4,
-        "text": "Let's read about christmas (James Bond)",
-        "correctPosition": 2
-      },
-      {
-        "id": 5,
-        "text": "Christmas is spain and Italy (World cup)"
-      },
-      {
-        "id": 6,
-        "text": "The fun just started at Christmas (Blue Man)",
-        "correctPosition": 3
-      },
-      {
-        "id": 7,
-        "text": "Not another white christmas (Mary White)"
-      },
-      {
-        "id": 8,
-        "text": "fake songs for game (Fake John)",
-        "correctPosition": 4
-      },
-      {
-        "id": 9,
-        "text": "Blue Christmas is white (White Snow)"
-      },
-      {
-        "id": 10,
-        "text": "Christmas in Tallin (Mariah Tallinn)",
-        "correctPosition": 5
-      },
-      {
-        "id": 11,
-        "text": "Christmas in Helsinki (Micheal Helsinki)"
-      },
-      {
-        "id": 12,
-        "text": "Let's sing about Christmas (James Vera)"
-      },
-      {
-        "id": 13,
-        "text": "Christmas in Quatar (Beauty B.)"
-      },
-      {
-        "id": 14,
-        "text": "The time to open gifts (Gift Man)"
-      },
-      {
-        "id": 15,
-        "text": "Not another boxing day (Mary Chris)"
-      },
-      {
-        "id": 16,
-        "text": "Beautiful Bela (Beauty John)"
-      },
-      {
-        "id": 17,
-        "text": "Jenny Stone (Stone Boy)"
-      },
-      {
-        "id": 18,
-        "text": "Black is beautiful (Beautiful world)"
-      },
-      {
-        "id": 19,
-        "text": "Now and forever (Jonah Frank)"
-      },
-      {
-        "id": 20,
-        "text": "Celebrate love (James Ken)"
-      },
-      {
-        "id": 21,
-        "text": "Here is the start (End Jude)"
-      },
-      {
-        "id": 22,
-        "text": "All he does is sing (Judy Gem)"
-      },
-      {
-        "id": 23,
-        "text": "Driving through the snore (Kenny West)"
-      },
-      {
-        "id": 24,
-        "text": "Fly high is Christmas (Micheal John)"
-      },
-      {
-        "id": 25,
-        "text": "Where do we start (John Presley)"
-      }
-    ]
-  },
-  "petrolPrices": {
-    "id": 2,
+[
+  {
     "source": "OpenAxis",
     "prompt": "Country with the highest global Petrol Prices as of November 2022",
     "options": [
@@ -142,8 +30,7 @@
       { "id": 25, "text": "Iran" }
     ]
   },
-  "Largest Navies": {
-    "id": 3,
+  {
     "source": "OpenAxis",
     "prompt": "Largest Navies in the World (by total number of warships and submarines - 2020",
     "options": [
@@ -174,8 +61,7 @@
       { "id": 25, "text": "Finland" }
     ]
   },
-  "Bite Force": {
-    "id": 4,
+  {
     "source": "OpenAxis",
     "prompt": "Largest Bite Force by PSI",
     "options": [
@@ -206,8 +92,7 @@
       { "id": 25, "text": "Nile Crocodile" }
     ]
   },
-  "Internet Users": {
-    "id": 5,
+  {
     "source": "World Bank, ITU",
     "prompt": "Individuals using the Internet (% of population)",
     "options": [
@@ -238,8 +123,7 @@
       { "id": 25, "text": "Germany" }
     ]
   },
-  "Player Salary": {
-    "id": 6,
+  {
     "source": "Statistica",
     "prompt": "Average annual player salary in the sports industry in 2019/20, by league",
     "options": [
@@ -262,4 +146,4 @@
       { "id": 17, "text": "NHL" }
     ]
   }
-}
+]

@@ -2,11 +2,16 @@ import React, { useEffect } from "react";
 import "../styles/styles.css";
 import useFactle from "../hooks/useFactle";
 import Grid from "./Grid";
+import EndModal from "./EndModal";
+import { useState } from "react";
 
 const OptionsCard = ({ fact: facts }) => {
+  const [showModal, setShowModal] = useState(false);
+
   const {
     currentGuess,
     guesses,
+    solution,
     isCorrect,
     turn,
     usedKeys,
@@ -15,12 +20,25 @@ const OptionsCard = ({ fact: facts }) => {
     enterGuessHandler,
   } = useFactle(facts);
 
+  useEffect(() => {
+    if (isCorrect) {
+      setTimeout(() => setShowModal(true), 2000);
+    }
+    if (turn > 5) {
+      setTimeout(() => setShowModal(true), 2000);
+    }
+  }, [isCorrect, turn]);
+
+  const closeHandler = () => {
+    setShowModal(false);
+  };
+
   return (
     <>
       <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
       <div className="options-container">
         {facts &&
-          facts.map(({ id, text, correctPosition }) => {
+          facts.options.map(({ id, text, correctPosition }) => {
             const color = usedKeys[text];
             return (
               <div
@@ -45,6 +63,14 @@ const OptionsCard = ({ fact: facts }) => {
           Enter
         </button>
       </div>
+      {showModal && (
+        <EndModal
+          close={closeHandler}
+          isCorrect={isCorrect}
+          turn={turn}
+          solution={solution}
+        />
+      )}
     </>
   );
 };

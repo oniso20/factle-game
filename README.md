@@ -1,4 +1,4 @@
-# Factle Game Project
+# FactChecker Game Project
 
 Factle is a new Wordle spin-off that asks users to solve a daily fact based challenge, such as which songs on Spotify have been streamed the most, what country has won the world cup the most. Users must then pick the top five answers and have six chances to make their guesses.
 
@@ -21,11 +21,13 @@ More info will be posted as the project is developed.
 
 In the project directory, you can run:
 
+CD to client folder or server before running available scripts
+
 ### `npm install`
 
 Installs and check for dependencies.
 
-### `npm start`
+### `npm run start:frontend`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -33,9 +35,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm run server`
+### `npm run start:backend`
 
-The json-server serving the test data is fired when this command is run. The json-data will be hosted on localhost:3001 as React will already be using localhost 3000.
+The json-server serving the test data is fired when this command is run. The json-data will be hosted on localhost:4200 as React will already be using localhost 3000.
 
 ### `npm test`
 
