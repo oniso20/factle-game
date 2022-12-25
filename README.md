@@ -1,10 +1,10 @@
 # FactChecker Game Project
 
-Factle is a new Wordle spin-off that asks users to solve a daily fact based challenge, such as which songs on Spotify have been streamed the most, what country has won the world cup the most. Users must then pick the top five answers and have six chances to make their guesses.
+FactChecker is a new Wordle spin-off that asks users to solve a daily fact based challenge, such as which songs on Spotify have been streamed the most, what country has won the world cup the most. Users must then pick the top five answers and have six chances to make their guesses.
 
 The game is developed to help users learn new facts, try their knowledge on current facts in a fun way.
 
-Learn more about Factle and Wordle games here - https://www.womanandhome.com/life/news-entertainment/factlethe-new-wordle-alternative-that-fans-are-loving/
+Learn more about Wordle and similar spin-off games here - https://www.womanandhome.com/life/news-entertainment/factlethe-new-wordle-alternative-that-fans-are-loving/
 
 More info will be posted as the project is developed.
 
