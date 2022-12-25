@@ -19,10 +19,14 @@ function App(props) {
   return (
     <>
       <Nav />
-      <div className="main-container">
-        <Question fact={fact} />
-        <OptionsCard fact={fact} />
-      </div>
+      {fact ? (
+        <div className="main-container">
+          <Question fact={fact} />
+          <OptionsCard fact={fact} />
+        </div>
+      ) : (
+        <div className="loading">Loading...</div>
+      )}
     </>
   );
 }
