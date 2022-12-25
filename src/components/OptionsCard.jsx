@@ -34,7 +34,7 @@ const OptionsCard = ({ fact: facts }) => {
   };
 
   return (
-    <>
+    <div className="all">
       <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
       <div className="options-container">
         {facts &&
@@ -71,7 +71,7 @@ const OptionsCard = ({ fact: facts }) => {
           solution={solution}
         />
       )}
-    </>
+    </div>
   );
 };
 
