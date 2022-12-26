@@ -20,6 +20,7 @@ nav {
 
   li {
     list-style-type: none;
+    padding: 1rem;
     max-width: 100%; /* ensure that the li element fits within the nav element */
     overflow: hidden; /* prevent content from extending beyond the li element */
   }
