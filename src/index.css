@@ -1,5 +1,5 @@
 * {
-  margin: 0 0 0 8px;
+  margin: 0;
   border: 0;
 }
 
@@ -10,6 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100vw;
+  padding: 4px;
 }
 
 code {

@@ -3,7 +3,6 @@ nav {
   @include flexCenter();
   @include cardFont();
   min-width: 50%;
-  margin: 0 10%;
   height: 3rem;
   background-color: $navBarBgColor;
   border: 3px solid #33333383;
@@ -16,11 +15,13 @@ nav {
     align-items: center;
     flex-direction: row;
     list-style-type: none;
-    padding-inline-start: 0;
+    padding-inline-start: 0; /* remove space before the first inline element */
   }
 
   li {
     list-style-type: none;
+    max-width: 100%; /* ensure that the li element fits within the nav element */
+    overflow: hidden; /* prevent content from extending beyond the li element */
   }
 
   li a {
