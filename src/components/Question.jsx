@@ -1,8 +1,8 @@
 import React from "react";
 
-const Question = ({ fact }) => {
+const Question = ({ fact, theme }) => {
   return (
-    <>
+    <div className={`${theme}-mode`}>
       <div className="question">
         <h3>{fact && fact.prompt}</h3>
         <div className="position">
@@ -13,7 +13,7 @@ const Question = ({ fact }) => {
           <div>5th</div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

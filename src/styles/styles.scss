@@ -34,6 +34,22 @@ $textColor: #ffffff;
   margin-top: 3rem;
 }
 
+@mixin light-mode {
+  background: #ffffff !important;
+  border-color: #000000 !important;
+  color: #000000 !important;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin dark-mode {
+  background-color: #000000 !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+  margin: 0;
+  padding: 0;
+}
+
 @import "./nav";
 @import "./main";
 @import "./card";

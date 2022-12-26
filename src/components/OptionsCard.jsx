@@ -5,7 +5,7 @@ import Grid from "./Grid";
 import EndModal from "./EndModal";
 import { useState } from "react";
 
-const OptionsCard = ({ fact: facts }) => {
+const OptionsCard = ({ fact: facts, theme }) => {
   const [showModal, setShowModal] = useState(false);
 
   const {
@@ -34,7 +34,7 @@ const OptionsCard = ({ fact: facts }) => {
   };
 
   return (
-    <>
+    <div className={`${theme}-mode`}>
       <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
       <div className="options-container">
         {facts &&
@@ -71,7 +71,7 @@ const OptionsCard = ({ fact: facts }) => {
           solution={solution}
         />
       )}
-    </>
+    </div>
   );
 };
 

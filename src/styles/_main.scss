@@ -16,3 +16,11 @@
   text-align: center;
   padding: auto;
 }
+
+.light-mode {
+  @include light-mode();
+}
+
+.dark-mode {
+  @include dark-mode();
+}
