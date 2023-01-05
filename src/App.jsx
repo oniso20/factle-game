@@ -26,7 +26,7 @@ function App(props) {
   }, [setFact]);
 
   return (
-    <div className={`${theme}-mode`}>
+    <div className={`${theme}-mode` ? "all" : "none"}>
       <Nav />
       {/* <button onClick={toggleTheme}>Toggle Theme</button> */}
       {fact ? (
