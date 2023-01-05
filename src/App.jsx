@@ -3,7 +3,6 @@ import "./styles/styles.css";
 import Nav from "./components/Nav";
 import Question from "./components/Question";
 import OptionsCard from "./components/OptionsCard";
-import axios from "axios";
 
 function App(props) {
   const [fact, setFact] = useState(null);
