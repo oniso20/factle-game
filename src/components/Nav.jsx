@@ -51,7 +51,7 @@ const Nav = () => {
               </span>
             </a>
           </li>
-          <li>
+          <li id="last">
             <a href="#">
               <span
                 onClick={openSettings}

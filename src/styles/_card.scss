@@ -5,24 +5,30 @@
 }
 
 .options-container {
+  @include flexCenter();
   @include cardContainer();
   width: fit-content;
   max-width: 100vw;
+  margin: 0 auto;
+}
+
+.grid {
+  margin: 0;
+  margin-bottom: 1.5rem;
 }
 
 .options-container > div {
-  @include flexCenter();
   border: 3px solid #3333338f;
   border-radius: 5px 10px 15px 30px/30px 15px 10px 5px;
   @include cardFont();
   width: 60px;
   height: 70px;
+  padding: 20%;
   color: #333333;
   text-overflow: ellipsis;
   direction: ltr;
   white-space: normal;
   overflow: hidden;
-  padding: 0;
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -53,7 +59,8 @@
 }
 
 #card {
-  @include flexCenter;
+  display: block;
+  margin: 0 auto;
   padding: 2px;
   text-align: center;
   font-size: 0.7rem;
@@ -86,18 +93,24 @@
   --background: #66a060;
   --border-color: #66a060;
   border: 3px solid #33333321;
+  height: 60px;
+  line-height: 60px;
   animation: cardFlip 0.5s ease forwards;
 }
 .rows > div.grey {
   --background: #939b9f;
   --border-color: #939b9f;
   border: 3px solid #33333321;
+  height: 60px;
+  line-height: 60px;
   animation: cardFlip 0.6s ease forwards;
 }
 .rows > div.yellow {
   --background: #ceb02c;
   --border-color: #ceb02c;
   border: 3px solid #33333321;
+  height: 60px;
+  line-height: 60px;
   animation: cardFlip 0.5s ease forwards;
 }
 .rows > div:nth-child(2) {
@@ -123,24 +136,24 @@
     background: #fff;
     border-color: #333333;
     border: 3px solid #33333321;
-    height: 70px; /* set the height to the same value as the line-height */
-    line-height: 70px;
+    height: 60px;
+    line-height: 60px;
   }
   45% {
     transform: rotateX(90deg);
     background: white;
     border-color: #333333;
     border: 3px solid #33333321;
-    height: 70px; /* set the height to the same value as the line-height */
-    line-height: 70px;
+    height: 60px;
+    line-height: 60px;
   }
   55% {
     transform: rotateX(90deg);
     background: var(--background);
     border-color: var(--border-color);
     border: 3px solid #33333321;
-    height: 70px; /* set the height to the same value as the line-height */
-    line-height: 70px;
+    height: 60px;
+    line-height: 60px;
   }
   100% {
     transform: rotateX(0deg);
@@ -148,8 +161,8 @@
     border-color: var(--border-color);
     border: 3px solid #33333321;
     color: $textColor;
-    height: 70px; /* set the height to the same value as the line-height */
-    line-height: 70px;
+    height: 60px;
+    line-height: 60px;
   }
 }
 
@@ -175,8 +188,22 @@
     padding: 0.6rem;
   }
 
-  .rows-container > div {
-    width: 80px;
+  .rows > div {
+    width: 70px;
     height: 65px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .options-container > div {
+    width: 55px;
+    height: 40px;
+    margin: 0;
+    padding: 0.6rem;
+  }
+
+  .rows > div {
+    width: 55px;
+    height: 50px;
   }
 }

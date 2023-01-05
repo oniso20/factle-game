@@ -3,6 +3,7 @@
 $navBarBgColor: #f3f3f3b0;
 $navTextColor: #202537;
 $navIconsColor: #818181;
+$loadingBgColor: #f3f3f3b0;
 
 $emptyBoxBgColor: #d3d6da;
 $wrongPositionBgColor: #939b9f;
@@ -31,6 +32,22 @@ $textColor: #ffffff;
   column-gap: 0.6rem;
   row-gap: 0.6rem;
   margin-top: 3rem;
+}
+
+@mixin light-mode {
+  background: #ffffff;
+  border-color: #000000;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin dark-mode {
+  background-color: #000000;
+  border-color: #ffffff;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
 @import "./nav";

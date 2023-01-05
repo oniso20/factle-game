@@ -1,4 +1,28 @@
 .main-container {
   @include flexCenter();
   flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.loading {
+  @include flexCenter();
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: $navTextColor;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: auto;
+}
+
+.light-mode {
+  @include light-mode();
+}
+
+.dark-mode {
+  @include dark-mode();
 }
