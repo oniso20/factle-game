@@ -14,7 +14,7 @@
   "scripts": {
     "start:frontend": "react-scripts start",
     "serve": "json-server ./data/db.json --port 3001",
-    "build": "react-scripts build",
+    "build": "react-scripts build --verbose",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy:aws": "aws s3 sync build s3://www.factchecker.pro"
