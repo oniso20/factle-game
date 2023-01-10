@@ -3,6 +3,7 @@ import "./styles/styles.css";
 import Nav from "./components/Nav";
 import Question from "./components/Question";
 import OptionsCard from "./components/OptionsCard";
+import Footer from "./components/Footer";
 
 function App(props) {
   const [fact, setFact] = useState(null);
@@ -27,6 +28,7 @@ function App(props) {
       ) : (
         <div className="loading">Loading...</div>
       )}
+      <Footer />
     </div>
   );
 }
