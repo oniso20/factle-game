@@ -48,6 +48,16 @@ ul {
   padding-left: 0;
 }
 
+#web {
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+#copy {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 500px) {
   nav {
     min-width: 50%;
