@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <nav>
       <div id="copy">&copy; </div>{" "}
-      <a id="web" href="www.onis-emem.com">
+      <a id="web" href="https://onis-emem.com/">
         {" "}
         Onis Emem
       </a>{" "}
